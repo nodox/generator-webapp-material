@@ -1,8 +1,7 @@
 <% if (includeBootstrap) { -%>
-$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
 
 // bower:scss
-@import "bootstrap-sass/assets/stylesheets/bootstrap.scss";
 // endbower
 
 .browsehappy {
