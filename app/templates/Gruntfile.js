@@ -359,7 +359,7 @@ module.exports = function (grunt) {
             '{,*/}*.html',
             'styles/fonts/{,*/}*.*'
           ]
-        }
+        }]
       }<% if (!includeSass) { %>,
       styles: {
         expand: true,
