@@ -155,8 +155,7 @@ module.exports = generators.Base.extend({
 
       // Default: include bootstrap
       bowerJson.dependencies['bootstrap'] = '~3.3.5';
-      bowerJson.overrides = {
-        'bootstrap': {
+      bowerJson.overrides['bootstrap'] = {
           'main': [
             'dist/css/bootstrap.css',
             'dist/js/bootstrap.js',
@@ -166,8 +165,7 @@ module.exports = generators.Base.extend({
 
       if (this.includeBootstrap) {
         bowerJson.dependencies['bootstrap-material-design'] = '~0.3.0';
-        bowerJson.overrides = { 
-          'bootstrap-material-design': {
+        bowerJson.overrides['bootstrap-material-design'] = { 
             'main': [
               'dist/css/material.css',
               'dist/css/ripples.css',
@@ -225,17 +223,6 @@ module.exports = generators.Base.extend({
     },
 
     html: function () {
-      var bsPath;
-
-      // path prefix for Bootstrap JS files
-      if (this.includeBootstrap) {
-        if (this.includeSass) {
-          bsPath = '/bower_components/bootstrap-sass/assets/javascripts/bootstrap/';
-        } else {
-          bsPath = '/bower_components/bootstrap/js/';
-        }
-      }
-
       this.fs.copyTpl(
         this.templatePath('index.html'),
         this.destinationPath('app/index.html'),
@@ -243,8 +230,7 @@ module.exports = generators.Base.extend({
           appname: this.appname,
           includeSass: this.includeSass,
           includeBootstrap: this.includeBootstrap,
-          includeModernizr: this.includeModernizr,
-          bsPath: bsPath
+          includeModernizr: this.includeModernizr
         }
       );
     },
