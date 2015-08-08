@@ -17,6 +17,11 @@ body {
   padding-bottom: 20px;
 }
 
+.section-landing {
+  margin-top: 80px;
+}
+
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -95,10 +100,16 @@ body {
 // bower:scss
 // endbower
 
+
+
 body {
   background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
+}
+
+.section-landing {
+  margin-top: 80px;
 }
 
 .hero-unit {
