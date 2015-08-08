@@ -223,6 +223,17 @@ module.exports = generators.Base.extend({
     },
 
     html: function () {
+     var bsPath;    
+  
+      // path prefix for Bootstrap JS files    
+      if (this.includeBootstrap) {   
+        if (this.includeSass) {    
+         bsPath = '/bower_components/bootstrap-sass/assets/javascripts/bootstrap/';   
+        } else {   
+         bsPath = '/bower_components/bootstrap/js/';    
+        }    
+      }
+
       this.fs.copyTpl(
         this.templatePath('index.html'),
         this.destinationPath('app/index.html'),
@@ -230,7 +241,8 @@ module.exports = generators.Base.extend({
           appname: this.appname,
           includeSass: this.includeSass,
           includeBootstrap: this.includeBootstrap,
-          includeModernizr: this.includeModernizr
+          includeModernizr: this.includeModernizr,
+          bsPath: bsPath
         }
       );
     },
