@@ -1,5 +1,5 @@
-# Webapp generator with Material Design [![Build Status](https://secure.travis-ci.org/yeoman/generator-webapp.svg?branch=master)](http://travis-ci.org/yeoman/generator-webapp)
-[![Build Status](https://travis-ci.org/snatera15/generator-webapp-material)]
+# Webapp generator with Material Design 
+[![Build Status](https://travis-ci.org/snatera15/generator-webapp-material.svg?branch=master)](https://travis-ci.org/snatera15/generator-webapp-material)
 
 Yeoman generator that scaffolds out a front-end web app with a material design theme.
 
