@@ -1,10 +1,10 @@
 {
-  "name": "generator-webapp",
+  "name": "generator-webapp-material",
   "version": "1.0.1",
-  "description": "Scaffold out a front-end web app",
+  "description": "Scaffold out a front-end web app with bootstrap material design theme",
   "license": "BSD",
-  "repository": "yeoman/generator-webapp",
-  "author": "Yeoman",
+  "repository": "snatera15/generator-webapp-material",
+  "author": "Steven Natera",
   "main": "app/index.js",
   "scripts": {
     "test": "mocha --reporter spec"
@@ -20,7 +20,9 @@
     "h5bp",
     "modernizr",
     "jquery",
-    "grunt"
+    "grunt",
+    "material",
+    "design"
   ],
   "dependencies": {
     "chalk": "^1.0.0",
