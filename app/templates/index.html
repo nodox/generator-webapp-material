@@ -83,13 +83,10 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-    <% if (includeBootstrap) { %>
+
     <!-- build:js(.) scripts/plugins.js -->
-<% bsPlugins.forEach(function (plugin) { -%>
-    <script src="<%= bsPath + plugin %>.js"></script>
-<% }) -%>
     <!-- endbuild -->
-    <% } %>
+
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
