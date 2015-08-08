@@ -70,7 +70,7 @@ module.exports = generators.Base.extend({
         value: 'includeSass',
         checked: true
       }, {
-        name: 'Bootstrap',
+        name: 'Bootstrap Material Theme',
         value: 'includeBootstrap',
         checked: true
       }, {
