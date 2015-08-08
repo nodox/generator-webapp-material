@@ -23,16 +23,13 @@ describe('bootstrap', function () {
       assert.noFileContent('bower.json', 'jquery');
     });
 
-    it('adds Bootstrap paths to Gruntfile.js', function () {
-      assert.fileContent('Gruntfile.js', 'bootstrap');
-    });
-
     it('adds the HTML description', function () {
       assert.fileContent('app/index.html', 'Bootstrap');
     });
   });
 
-  describe('with Sass', function () {
+  describe('with Material Theme', function () {
+
     before(function (done) {
       helpers.run(path.join(__dirname, '../app'))
         .inDir(path.join(__dirname, '.tmp'))
@@ -44,13 +41,13 @@ describe('bootstrap', function () {
         .on('end', done);
     });
 
-    it('uses Bootstrap Sass', function () {
-      assert.fileContent('bower.json', '"bootstrap-sass"');
-      assert.fileContent('Gruntfile.js', '/bootstrap-sass/');
+    it('uses Bootstrap Material Design', function () {
+      assert.fileContent('bower.json', '"bootstrap-material-design"');
     });
+
   });
 
-  describe('without Sass', function () {
+  describe('without Material Theme', function () {
     before(function (done) {
       helpers.run(path.join(__dirname, '../app'))
         .inDir(path.join(__dirname, '.tmp'))
@@ -63,7 +60,6 @@ describe('bootstrap', function () {
 
     it('uses regular Bootstrap', function () {
       assert.fileContent('bower.json', '"bootstrap"');
-      assert.fileContent('Gruntfile.js', '/bootstrap/');
     });
   });
 });

@@ -153,16 +153,18 @@ module.exports = generators.Base.extend({
         dependencies: {}
       };
 
+      // Default: include bootstrap
+      bowerJson.dependencies['bootstrap'] = '~3.3.5';
+      bowerJson.overrides = {
+        'bootstrap': {
+          'main': [
+            'dist/css/bootstrap.css',
+            'dist/js/bootstrap.js',
+          ]
+        }
+      };
+
       if (this.includeBootstrap) {
-        bowerJson.dependencies['bootstrap'] = '~3.3.5';
-        bowerJson.overrides = {
-          'bootstrap': {
-            'main': [
-              'dist/css/bootstrap.css',
-              'dist/js/bootstrap.js',
-            ]
-          }
-        };
         bowerJson.dependencies['bootstrap-material-design'] = '~0.3.0';
         bowerJson.overrides = { 
           'bootstrap-material-design': {
