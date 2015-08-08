@@ -230,21 +230,7 @@ module.exports = generators.Base.extend({
           includeSass: this.includeSass,
           includeBootstrap: this.includeBootstrap,
           includeModernizr: this.includeModernizr,
-          bsPath: bsPath,
-          bsPlugins: [
-            'affix',
-            'alert',
-            'dropdown',
-            'tooltip',
-            'modal',
-            'transition',
-            'button',
-            'popover',
-            'carousel',
-            'scrollspy',
-            'collapse',
-            'tab'
-          ]
+          bsPath: bsPath
         }
       );
     },
