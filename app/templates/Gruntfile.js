@@ -359,21 +359,7 @@ module.exports = function (grunt) {
             '{,*/}*.html',
             'styles/fonts/{,*/}*.*'
           ]
-        }<% if (includeBootstrap) { %>, {
-          expand: true,
-          dot: true,
-          cwd: '<% if (includeSass) {
-              %>.<%
-            } else {
-              %>bower_components/bootstrap/dist<%
-            } %>',
-          src: '<% if (includeSass) {
-              %>bower_components/bootstrap-sass/assets/fonts/bootstrap/*<%
-            } else {
-              %>fonts/*<%
-            } %>',
-          dest: '<%%= config.dist %>'
-        }<% } %>]
+        }
       }<% if (!includeSass) { %>,
       styles: {
         expand: true,
