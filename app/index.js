@@ -162,7 +162,19 @@ module.exports = generators.Base.extend({
               'dist/js/bootstrap.js',
             ]
           }
-        }
+        };
+        bowerJson.dependencies['bootstrap-material-design'] = '~0.3.0';
+        bowerJson.overrides = { 
+          'bootstrap-material-design': {
+            'main': [
+              'dist/css/material.css',
+              'dist/css/ripples.css',
+              'dist/css/roboto.css',
+              'dist/js/material.js',
+              'dist/js/ripples.js'
+            ]
+          }
+        };
       } else if (this.includeJQuery) {
         bowerJson.dependencies['jquery'] = '~2.1.4';
       }
