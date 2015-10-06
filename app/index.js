@@ -134,6 +134,13 @@ module.exports = generators.Base.extend({
       )
     },
 
+    indexJS: function () {
+      this.fs.copyTpl(
+        this.templatePath('_index.js'),
+        this.destinationPath('index.js'), 
+      )
+    },
+
     git: function () {
       this.fs.copy(
         this.templatePath('gitignore'),
