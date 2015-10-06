@@ -131,14 +131,21 @@ module.exports = generators.Base.extend({
           testFramework: this.options['test-framework'],
           useBabel: this.options['babel']
         }
-      )
+      );
     },
 
     indexJS: function () {
-      this.fs.copyTpl(
+      this.fs.copy(
         this.templatePath('_index.js'),
-        this.destinationPath('index.js'), 
-      )
+        this.destinationPath('index.js') 
+      );
+    },
+
+    procfile: function() {
+      this.fs.copy(
+        this.templatePath('Procfile'),
+        this.destinationPath('Procfile')
+      );
     },
 
     git: function () {
