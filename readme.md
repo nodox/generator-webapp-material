@@ -61,4 +61,5 @@ Use `grunt serve` to preview versions of your project.
 
 ## Contribute
 
+Any and all contributors are welcome! Check out below for posterity and then work here.
 See the [contributing docs](https://github.com/snatera15/generator-webapp-material/blob/master/contributing.md).
