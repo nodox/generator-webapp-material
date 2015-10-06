@@ -23,6 +23,8 @@ describe('general', function () {
       'bower.json',
       '.bowerrc',
       'Gruntfile.js',
+      'index.js',
+      'Procfile',
       'app/favicon.ico',
       'app/apple-touch-icon.png',
       'app/index.html',
