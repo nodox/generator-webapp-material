@@ -15,6 +15,7 @@ Yeoman generator that scaffolds out a front-end web app with a material design t
 * Mocha Unit Testing with PhantomJS
 * Bootstrap with Material design theme (Optional)
 * Leaner Modernizr builds (Optional)
+* Heroku ready deployment settings
 
 For more information on what `generator-webapp-material` can do for you, take a look at the [Grunt tasks](https://github.com/yeoman/generator-webapp/blob/master/app/templates/_package.json) used in our `package.json`.
 
@@ -25,6 +26,15 @@ For more information on what `generator-webapp-material` can do for you, take a 
 - Run: `yo webapp-material`
 - Run `grunt` for building and `grunt serve` for preview[\*](#grunt-serve-note). `--allow-remote` option for remote access.
 
+
+## Deployment To Heroku
+
+- Setup heroku-toolbelt
+```sh
+$ grunt build`
+$ heroku create [PROJECT_NAME]
+$ git push heroku master
+```
 
 #### Third-Party Dependencies
 
@@ -39,16 +49,14 @@ $ grunt wiredep
 
 This works if the package author has followed the [Bower spec](https://github.com/bower/bower.json-spec). If the files are not automatically added to your source code, check with the package's repo for support and/or file an issue with them to have it updated.
 
-To manually add dependencies, `bower install --save depName` to get the files, then add a `script` or `style` tag to your `index.html` or another appropriate place.
-
-The components are installed in the root of the project at `/bower_components`. To reference them from index.html, use `src="bower_components"` or `src="/bower_components"`. Treat the `bower_components` directory as if it was a sibling to `index.html`.
+To manually add dependencies, `bower install --save depName` to get the files, then add a `script` or `style` tag to your `index.html` or another appropriate place. If using bower reference them from index.html, using `src="bower_components"` or `src="/bower_components"`.
 
 *Testing Note*: a project checked into source control and later checked out needs to have `bower install` run from the `test` folder as well as from the project root.
 
 
 #### Grunt Serve Note
 
-Note: `grunt server` was used for previewing in earlier versions of the project, and has since been deprecated in favor of `grunt serve`.
+Use `grunt serve` to preview versions of your project.
 
 
 ## Docs
