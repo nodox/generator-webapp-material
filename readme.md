@@ -31,7 +31,7 @@ For more information on what `generator-webapp-material` can do for you, take a 
 
 - Setup heroku-toolbelt
 ```sh
-$ grunt build`
+$ grunt build
 $ heroku create [PROJECT_NAME]
 $ git push heroku master
 ```
@@ -59,12 +59,6 @@ To manually add dependencies, `bower install --save depName` to get the files, t
 Use `grunt serve` to preview versions of your project.
 
 
-## Docs
-
-We have [recipes](docs/recipes) for integrating other popular technologies like Compass.
-
-
-
 ## Contribute
 
-See the [contributing docs](https://github.com/yeoman/yeoman/blob/master/contributing.md).
+See the [contributing docs](https://github.com/snatera15/generator-webapp-material/blob/master/contributing.md).
